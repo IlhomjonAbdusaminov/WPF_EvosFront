@@ -25,12 +25,11 @@
                 </Trigger>
             </Style.Triggers>
 
-
             <Style.Setters>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="20"
+                            <Border CornerRadius="8"
                                     Background="{TemplateBinding Background}"
                                     BorderBrush="{TemplateBinding BorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}">
@@ -47,7 +46,47 @@
                     </Setter.Value>
                 </Setter>
             </Style.Setters>
+        </Style>
 
+        <Style x:Key="BigBtn" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True" >
+                    <Setter Property="Background"  Value="Transparent"/>
+                    <Setter Property="Foreground" Value="Snow"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Opacity" Value="0.650" />
+                    <Setter Property="BorderBrush" Value="LightGoldenrodYellow" />
+                </Trigger>
+
+                <Trigger Property="IsMouseOver" Value="False" >
+                    <Setter Property="Background"  Value="Transparent"/>
+                    <Setter Property="Foreground" Value="DarkGreen"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="BorderBrush" Value="SpringGreen" />
+                </Trigger>
+            </Style.Triggers>
+
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="0">
+                                <ContentPresenter
+                                        x:Name="contentPresenter"
+                                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                                        Content="{TemplateBinding Content}"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
         </Style>
     </Window.Resources>
 
@@ -136,7 +175,7 @@
         <Button
             Style="{StaticResource BtnRadius}"
             Grid.Column="1" Grid.Row="1"
-            Content="Tizimga kirish"
+            Content="Ro'yxatdan o'tish"
             BorderThickness="2"
             FontSize="20"
             FontFamily="Verdana"
@@ -147,7 +186,7 @@
         <Button
             Style="{StaticResource BtnRadius}"
             Grid.Column="2" Grid.Row="1"
-            Content="Tizimga kirish"            
+            Content="Biz haqimizda"            
             FontSize="20"
             FontFamily="Verdana"
             BorderThickness="2"
@@ -200,18 +239,40 @@
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 FontSize="22" FontWeight="SemiBold" Foreground="Snow" FontFamily="Georgia"/>
 
+            <Grid x:Name="Image_Gamburger"
+                Grid.Column="0" Grid.Row="1">
+                <Button 
+                    Style="{StaticResource BigBtn}">
+                    <Grid>
+                        <Image
+                             Source="/WPFEvosFront;Component/Images/imageGamburger.png">
+                        </Image>
 
-            <Image Grid.Column="0" Grid.Row="1"
-                   Source="/WPFEvosFront;Component/Images/imageGamburger.png">
-            </Image>
+                    </Grid>
+                </Button>
+            </Grid>
 
-            <Image Grid.Column="1" Grid.Row="1"
-                   Source="/WPFEvosFront;Component/Images/Hotdog.jpg">
-            </Image>
 
-            <Image Grid.Column="2" Grid.Row="1"
-                   Source="/WPFEvosFront;Component/Images/Lavash.jpg">
-            </Image>
+            <Grid x:Name="Image_Hotdog"
+                Grid.Column="1" Grid.Row="1">
+                <Button Style="{StaticResource BigBtn}" >
+                    <Image Grid.Column="1" Grid.Row="1"
+                        Source="/WPFEvosFront;Component/Images/Hotdog.jpg">
+                    </Image>
+                </Button>
+            </Grid>
+
+
+            <Grid x:Name="Image_Lavash"
+                Grid.Column="2" Grid.Row="1">
+                <Button Style="{StaticResource BigBtn}">
+                    <Image Grid.Column="2" Grid.Row="1"
+                        Source="/WPFEvosFront;Component/Images/Lavash.jpg">
+                    </Image>
+                </Button>
+            </Grid>
+            
+
 
 
         </Grid>
