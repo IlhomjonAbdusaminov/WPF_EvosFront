@@ -14,12 +14,14 @@
                     <Setter Property="Background"  Value="#647A35"/>
                     <Setter Property="Foreground" Value="Snow"/>
                     <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="BorderBrush" Value="LightGoldenrodYellow" />
                 </Trigger>
 
                 <Trigger Property="IsMouseOver" Value="False" >
                     <Setter Property="Background"  Value="#42A0D3"/>
                     <Setter Property="Foreground" Value="DarkGreen"/>
                     <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="BorderBrush" Value="SpringGreen" />
                 </Trigger>
             </Style.Triggers>
 
@@ -126,7 +128,6 @@
             Content="Tizimga kirish"
             FontSize="20"
             FontFamily="Verdana"
-            BorderBrush="SpringGreen"
             BorderThickness="2"
             Margin="7 10 7 10">
         </Button>
@@ -136,7 +137,6 @@
             Style="{StaticResource BtnRadius}"
             Grid.Column="1" Grid.Row="1"
             Content="Tizimga kirish"
-            BorderBrush="SpringGreen"
             BorderThickness="2"
             FontSize="20"
             FontFamily="Verdana"
@@ -150,7 +150,6 @@
             Content="Tizimga kirish"            
             FontSize="20"
             FontFamily="Verdana"
-            BorderBrush="SpringGreen"
             BorderThickness="2"
             Margin="7 10 7 10">
 
