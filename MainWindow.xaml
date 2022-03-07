@@ -56,7 +56,8 @@
                     <Setter Property="Cursor" Value="Hand"/>
                     <Setter Property="Opacity" Value="0.650" />
                     <Setter Property="BorderBrush" Value="LightGoldenrodYellow" />
-                    <Setter Property="Margin" Value="10 10 10 10" />
+                    <Setter Property="Margin" Value="5 5 5 5" />
+                  
                 </Trigger>
 
                 <Trigger Property="IsMouseOver" Value="False" >
@@ -111,10 +112,12 @@
             </Image>
         </Grid>
 
+       <!-- 
         <TabControl>
             <TabItem Header="Bosh sahifa" Background="Transparent"/>
             <TabItem Header="Ro'yxatdan o'tish" />
         </TabControl>
+        -->
 
         <Label 
             Grid.Row="0"
