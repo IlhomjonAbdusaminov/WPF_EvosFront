@@ -29,9 +29,17 @@ namespace WPFEvosFront
             MessageBox.Show("+998 94 946 22 20");
         }
 
-        private void LoginBtn_Click(object sender, RoutedEventArgs e)
+        private void SignInBtn(object sender, RoutedEventArgs e)
         {
             mainTabControl.SelectedIndex = 1;
+        }
+        private void SignUpBtn(object sender, RoutedEventArgs e)
+        {
+            mainTabControl.SelectedIndex = 2;
+        }
+        private void AboutWeBtn(object sender, RoutedEventArgs e)
+        {
+            mainTabControl.SelectedIndex = 3;
         }
         private void BackBoshSahifa(object sender, RoutedEventArgs e)
         {

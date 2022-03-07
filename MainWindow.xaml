@@ -182,7 +182,7 @@
             BorderThickness="2"
             Margin="7 10 7 10"
             x:Name="LoginBtn"
-            Click="LoginBtn_Click">
+            Click="SignInBtn">
         </Button>
 
         <Button
@@ -192,7 +192,8 @@
             BorderThickness="2"
             FontSize="20"
             FontFamily="Verdana"
-            Margin="7 10 7 10">
+            Margin="7 10 7 10"
+            Click="SignUpBtn">
         </Button>
 
         <Button
@@ -202,8 +203,8 @@
             FontSize="20"
             FontFamily="Verdana"
             BorderThickness="2"
-            Margin="7 10 7 10">
-
+            Margin="7 10 7 10"
+            Click="AboutWeBtn">
         </Button>
 
 
@@ -292,12 +293,32 @@
         </TabItem>
         <TabItem
                 Visibility="Collapsed"
+                Header="Tizimga kirish"
+                Background="Transparent"
+                BorderThickness="0">
+                <Grid Background="Blue">
+                    <Button Style="{StaticResource BtnRadius}"  Width="70" Height="50" Click="BackBoshSahifa" Content="Qaytish"/>
+                </Grid>
+        </TabItem>
+
+        <TabItem
+                Visibility="Collapsed"
                 Header="Ro'yxatdan o'tish"
                 Background="Transparent"
                 BorderThickness="0">
-            <Grid>
-                <Button Style="{StaticResource BtnRadius}"  Width="70" Height="50" Click="BackBoshSahifa" Content="Qaytish"/>
-            </Grid>
+                <Grid Background="Blue">
+                    <Button Style="{StaticResource BtnRadius}"  Width="70" Height="50" Click="BackBoshSahifa" Content="Qaytish"/>
+                </Grid>
+        </TabItem>
+
+        <TabItem
+                Visibility="Collapsed"
+                Header="Biz haqimizda"
+                Background="Transparent"
+                BorderThickness="0">
+                <Grid Background="Blue">
+                    <Button Style="{StaticResource BtnRadius}"  Width="70" Height="50" Click="BackBoshSahifa" Content="Qaytish"/>
+                </Grid>
         </TabItem>
 
     </TabControl>
