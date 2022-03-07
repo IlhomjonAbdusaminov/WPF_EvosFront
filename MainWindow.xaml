@@ -56,6 +56,7 @@
                     <Setter Property="Cursor" Value="Hand"/>
                     <Setter Property="Opacity" Value="0.650" />
                     <Setter Property="BorderBrush" Value="LightGoldenrodYellow" />
+                    <Setter Property="Margin" Value="10 10 10 10" />
                 </Trigger>
 
                 <Trigger Property="IsMouseOver" Value="False" >
@@ -91,6 +92,7 @@
     </Window.Resources>
 
 
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -108,6 +110,11 @@
                 Source="/WPFEvosFront;Component/Images/imageEVOS.jpg" Stretch="Fill" Opacity="0.8">
             </Image>
         </Grid>
+
+        <TabControl>
+            <TabItem Header="Bosh sahifa" Background="Transparent"/>
+            <TabItem Header="Ro'yxatdan o'tish" />
+        </TabControl>
 
         <Label 
             Grid.Row="0"
@@ -171,7 +178,6 @@
             Margin="7 10 7 10">
         </Button>
 
-
         <Button
             Style="{StaticResource BtnRadius}"
             Grid.Column="1" Grid.Row="1"
@@ -181,7 +187,6 @@
             FontFamily="Verdana"
             Margin="7 10 7 10">
         </Button>
-
 
         <Button
             Style="{StaticResource BtnRadius}"
@@ -204,7 +209,7 @@
             Background="#68B133" Margin="10 20 10 20"
             Opacity="0.5" CornerRadius="30">
         </Border>
-
+        
         <Grid  
             Grid.Column="0"
             Grid.ColumnSpan="3"
