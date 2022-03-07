@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPFEvosFront.Windows;
 
 namespace WPFEvosFront
 {
@@ -27,8 +26,16 @@ namespace WPFEvosFront
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SignIn signIn = new SignIn();
-            signIn.Show();
+            MessageBox.Show("+998 94 946 22 20");
+        }
+
+        private void LoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainTabControl.SelectedIndex = 1;
+        }
+        private void BackBoshSahifa(object sender, RoutedEventArgs e)
+        {
+            mainTabControl.SelectedIndex = 0;
         }
     }
 }
