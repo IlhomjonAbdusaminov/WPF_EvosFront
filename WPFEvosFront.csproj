@@ -12,6 +12,7 @@
     <None Remove="Images\imageEVOS.jpg" />
     <None Remove="Images\imageGamburger.png" />
     <None Remove="Images\Lavash.jpg" />
+    <None Remove="Images\SignInBackround.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +30,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Lavash.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\SignInBackround.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

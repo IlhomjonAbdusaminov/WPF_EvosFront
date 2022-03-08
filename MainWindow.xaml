@@ -292,12 +292,66 @@
     </Grid>
         </TabItem>
         <TabItem
+                
                 Visibility="Collapsed"
                 Header="Tizimga kirish"
                 Background="Transparent"
                 BorderThickness="0">
-                <Grid Background="Blue">
-                    <Button Style="{StaticResource BtnRadius}"  Width="70" Height="50" Click="BackBoshSahifa" Content="Qaytish"/>
+                
+                
+                
+                <Grid Background="LightBlue">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0" Grid.ColumnSpan="3"
+                        Source="/WPFEvosFront;Component/Images/SignInBackround.jpg" Stretch="UniformToFill">
+                    </Image>
+                    
+                <Border  
+                        Grid.Column="0" Grid.ColumnSpan="3"
+                        Margin="100 100 100 80" CornerRadius="35" 
+                        Background="LightGreen"
+                        BorderThickness="2" BorderBrush="Gold" 
+                        Opacity="0.7">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Border 
+                            Grid.Row="0" Margin="70 45 55 30"
+                            Background="LightGoldenrodYellow"
+                            CornerRadius="30" BorderBrush="Gold"
+                            BorderThickness="2" Padding="3">
+
+                            <TextBox
+                                Grid.Row="1"
+                                Margin="75 45 55 35"
+                                BorderThickness="0"
+                                Background="Transparent"
+                                FontSize="22" Padding="11" />
+                        </Border>
+                    
+                        <Border
+                            Grid.Row="1" Margin="70 25 55 50"
+                            Background="LightGoldenrodYellow"
+                            CornerRadius="30" BorderBrush="Gold"
+                            BorderThickness="2" Padding="3">
+
+                            <TextBox
+                                Grid.Row="0"
+                                Margin="14 2 14 2"
+                                BorderThickness="0"
+                                Background="Transparent"
+                                FontSize="22" Padding="11" />
+                        </Border>
+                    </Grid>
+                    </Border>
                 </Grid>
         </TabItem>
 
