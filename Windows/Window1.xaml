@@ -69,7 +69,15 @@
              Source="/WPFEvosFront;Component/Images/SignInBackRound.jpg" Stretch="UniformToFill">
         </Image>
 
-        <Border Grid.Column="1" Grid.Row="1" Background="LightGreen" Opacity="0.5" CornerRadius="20">
+        <Label 
+                    Grid.Row="0" Grid.Column="1"
+                    Content="Ro'yxatdan o'tish"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    FontSize="28" FontFamily="Latha" FontWeight="SemiBold" Opacity="0.8"
+                    Foreground="Brown">
+        </Label>
+
+        <Border Grid.Column="1" Grid.Row="1" Background="LightGreen" Opacity="0.5" CornerRadius="20" BorderBrush="DarkGoldenrod" BorderThickness="4">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -77,5 +85,13 @@
                 </Grid.ColumnDefinitions>
             </Grid>
         </Border>
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource TizimWindowBtn}" Content="Qaytish" FontSize="18" Margin="6 15 20 15" BorderThickness="2" />
+            <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource TizimWindowBtn}" Content="Tasdiqlash" FontSize="18" Margin="20 15 6 15" BorderThickness="2" />
+        </Grid>
     </Grid>
 </Window>

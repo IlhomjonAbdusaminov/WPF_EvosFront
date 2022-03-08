@@ -433,32 +433,47 @@
                 Header="Biz haqimizda"
                 Background="Transparent"
                 BorderThickness="0">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="3.5*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3.5*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                    <Image 
+                <Image 
                      Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="3"
-                     Source="/WPFEvosFront;Component/Images/SignInBackRound.jpg" Stretch="UniformToFill">
-                    </Image>
+                    Source="/WPFEvosFront;Component/Images/SignInBackRound.jpg" Stretch="UniformToFill">
+                </Image>
 
-                    <Border Grid.Column="1" Grid.Row="1" Background="LightGreen" Opacity="0.5" CornerRadius="20">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
+                <Label 
+                    Grid.Row="0" Grid.Column="1"
+                    Content="Ro'yxatdan o'tish"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    FontSize="28" FontFamily="Latha" FontWeight="SemiBold" Opacity="0.8"
+                    Foreground="Brown">
+                </Label>
+
+                <Border Grid.Column="1" Grid.Row="1" Background="LightGreen" Opacity="0.5" CornerRadius="20" BorderBrush="DarkGoldenrod" BorderThickness="4">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        </Grid>
-                    </Border>
-                    <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource BtnRadius}"  Width="70" Height="50" Click="BackBoshSahifa" Content="Qaytish"/>
+                    </Grid>
+                </Border>
+                <Grid Grid.Column="1" Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource TizimWindowBtn}" Content="Qaytish" FontSize="18" Margin="6 15 20 15" BorderThickness="2" Click="SignQaytishBtn"/>
+                    <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource TizimWindowBtn}" Content="Tasdiqlash" FontSize="18" Margin="20 15 6 15" BorderThickness="2" />
+                </Grid>
             </Grid>
         </TabItem>
 
