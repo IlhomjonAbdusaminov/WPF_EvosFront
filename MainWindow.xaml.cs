@@ -45,5 +45,9 @@ namespace WPFEvosFront
         {
             mainTabControl.SelectedIndex = 0;
         }
+        private void SignQaytishBtn(object sender, RoutedEventArgs e)
+        {
+            mainTabControl.SelectedIndex = 0;
+        }
     }
 }
