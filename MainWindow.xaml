@@ -90,6 +90,48 @@
                 </Setter>
             </Style.Setters>
         </Style>
+
+        <Style x:Key="TizimWindowBtn" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True" >
+                    <Setter Property="Background"  Value="#647A35"/>
+                    <Setter Property="Foreground" Value="Snow"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="BorderBrush" Value="LightGoldenrodYellow" />
+                </Trigger>
+
+                <Trigger Property="IsMouseOver" Value="False" >
+                    <Setter Property="Background"  Value="Snow"/>
+                    <Setter Property="Foreground" Value="Brown"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="BorderBrush" Value="SpringGreen" />
+                </Trigger>
+            </Style.Triggers>
+
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="15"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter
+                                        x:Name="contentPresenter"
+                                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                                        Content="{TemplateBinding Content}"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+
+
     </Window.Resources>
 
 
@@ -100,7 +142,6 @@
                 Background="Transparent"
                 BorderThickness="0">
 
-        
             <Grid>
         
         <Grid.ColumnDefinitions>
@@ -310,10 +351,16 @@
                     <Image Grid.Column="0" Grid.ColumnSpan="3"
                         Source="/WPFEvosFront;Component/Images/SignInBackround.jpg" Stretch="UniformToFill">
                     </Image>
+                <Label
+                    Grid.Column="1"
+                    Content="Tizimga kirish" FontSize="20"
+                    HorizontalAlignment="Center" Margin="0 20 0 150 
+                    " FontWeight="SemiBold" BorderThickness="2" BorderBrush="Black">
+                </Label>
                     
                 <Border  
                         Grid.Column="0" Grid.ColumnSpan="3"
-                        Margin="100 100 100 80" CornerRadius="35" 
+                        Margin="80 100 100 90" CornerRadius="35" 
                         Background="LightGreen"
                         BorderThickness="2" BorderBrush="Gold" 
                         Opacity="0.7">
@@ -336,7 +383,7 @@
                                 Background="Transparent"
                                 FontSize="22" Padding="11" />
                         </Border>
-                    
+
                         <Border
                             Grid.Row="1" Margin="70 25 55 50"
                             Background="LightGoldenrodYellow"
@@ -351,8 +398,28 @@
                                 FontSize="22" Padding="11" />
                         </Border>
                     </Grid>
-                    </Border>
-                </Grid>
+                </Border>
+                <Button
+                    Style="{StaticResource TizimWindowBtn}"
+                    Grid.Column="0" Grid.ColumnSpan="3" Content="Qaytish" 
+                    Width="180" Height="50" Margin="90 0 0 25"  Click="BackBoshSahifa"
+                    VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                </Button>
+
+                <Button
+                    Style="{StaticResource TizimWindowBtn}"
+                    Grid.Column="0" Grid.ColumnSpan="3" Content="Qaytish" 
+                    Width="180" Height="50" Margin="550 0 0 25" Click="BackBoshSahifa"
+                    VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                </Button>
+
+                <Button
+                    Style="{StaticResource TizimWindowBtn}"
+                    Grid.Column="0" Grid.ColumnSpan="3" Content="Qaytish" 
+                    Width="180" Height="50" Margin="320 0 0 25" Click="BackBoshSahifa"
+                    VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                </Button>
+            </Grid>
         </TabItem>
 
         <TabItem
