@@ -102,7 +102,8 @@
                 </Trigger>
 
                 <Trigger Property="IsMouseOver" Value="False" >
-                    <Setter Property="Background"  Value="Snow"/>
+                    <Setter Property="Background"  Value="LightGreen"/>
+                    <Setter Property="Opacity" Value="0.7" />
                     <Setter Property="Foreground" Value="Brown"/>
                     <Setter Property="Cursor" Value="Hand"/>
                     <Setter Property="BorderBrush" Value="SpringGreen" />
@@ -132,7 +133,6 @@
                 </Setter>
             </Style.Setters>
         </Style>
-
 
     </Window.Resources>
 
@@ -329,9 +329,6 @@
                         </Button>
                     </Grid>
 
-
-
-
                 </Grid>
             </Grid>
         </TabItem>
@@ -461,9 +458,58 @@
                 <Border Grid.Column="1" Grid.Row="1" Background="LightGreen" Opacity="0.5" CornerRadius="20" BorderBrush="DarkGoldenrod" BorderThickness="4">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Border 
+                                Grid.Row="0" Grid.Column="0"
+                                Margin="25 24 20 20" Background="LightBlue"
+                                BorderBrush="DarkGoldenrod" BorderThickness="3"
+                                CornerRadius="10">
+                                <TextBox Margin="5 5 5 5" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black"/>
+                        </Border>
+
+                        <Border 
+                                Grid.Row="0" Grid.Column="1"
+                                Margin="20 24 25 20" Background="LightBlue"
+                                BorderBrush="DarkGoldenrod" BorderThickness="3"
+                                CornerRadius="10">
+                                <TextBox Margin="5 5 5 5" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black"/>
+                        </Border>
+
+                        <Border 
+                                Grid.Row="1" Grid.Column="0"
+                                Margin="25 24 20 20" Background="LightBlue"
+                                BorderBrush="DarkGoldenrod" BorderThickness="3"
+                                CornerRadius="10">
+                                <TextBox Margin="5 5 5 5" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black"/>
+                        </Border>
+
+                        <Border 
+                                Grid.Row="1" Grid.Column="1"
+                                Margin="20 24 25 20" Background="LightBlue"
+                                BorderBrush="DarkGoldenrod" BorderThickness="3"
+                                CornerRadius="10">
+                                <TextBox Margin="5 5 5 5" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black" />
+                        </Border>
+
+                        <Grid Grid.Row="2" Grid.Column="1">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+        
+                        </Grid>
+
                     </Grid>
                 </Border>
                 <Grid Grid.Column="1" Grid.Row="2">
@@ -484,6 +530,7 @@
                 Background="Transparent"
                 BorderThickness="0">
             <Grid Background="Blue">
+                
                 <Button Style="{StaticResource BtnRadius}"  Width="70" Height="50" Click="BackBoshSahifa" Content="Qaytish"/>
             </Grid>
         </TabItem>

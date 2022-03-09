@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WPFEvosFront.Windows
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for TestSingUpWindow.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class TestSingUpWindow : Window
     {
-        public Window1()
+        public TestSingUpWindow()
         {
             InitializeComponent();
         }
