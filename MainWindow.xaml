@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         Title="EVOS_menu" Height="520" Width="850">
     <Window.Resources>
+
         <Style x:Key="BtnRadius" TargetType="Button">
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True" >
@@ -137,7 +138,11 @@
     </Window.Resources>
 
 
-    <TabControl x:Name="mainTabControl" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="3" Background="Transparent" BorderThickness="0">
+    <TabControl
+        x:Name="mainTabControl"
+        Grid.Row="0" Grid.RowSpan="3"
+        Grid.Column="0" Grid.ColumnSpan="3"
+        Background="Transparent" BorderThickness="0">
         
         <!-- Bosh menu -->
         <TabItem Name="Bosh_sahifa_page"
@@ -303,7 +308,7 @@
                             Style="{StaticResource BigBtn}">
                             <Grid>
                                 <Image
-                                    Source="/WPFEvosFront;Component/Images/imageGamburger.png">
+                                    Source="/WPFEvosFront;Component/Images/ImageGamburger.png">
                                 </Image>
                             </Grid>
                         </Button>
@@ -472,7 +477,7 @@
                                 Margin="25 24 20 20" Background="LightBlue"
                                 BorderBrush="DarkGoldenrod" BorderThickness="3"
                                 CornerRadius="10">
-                                <TextBox Margin="5 5 5 5" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black"/>
+                                <TextBox Margin="5 5 5 0" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black"/>
                         </Border>
 
                         <Border 
@@ -480,7 +485,7 @@
                                 Margin="20 24 25 20" Background="LightBlue"
                                 BorderBrush="DarkGoldenrod" BorderThickness="3"
                                 CornerRadius="10">
-                                <TextBox Margin="5 5 5 5" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black"/>
+                                <TextBox Margin="5 5 5 0" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black"/>
                         </Border>
 
                         <Border 
@@ -488,7 +493,7 @@
                                 Margin="25 24 20 20" Background="LightBlue"
                                 BorderBrush="DarkGoldenrod" BorderThickness="3"
                                 CornerRadius="10">
-                                <TextBox Margin="5 5 5 5" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black"/>
+                                <TextBox Margin="5 5 5 0" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black"/>
                         </Border>
 
                         <Border 
@@ -496,7 +501,7 @@
                                 Margin="20 24 25 20" Background="LightBlue"
                                 BorderBrush="DarkGoldenrod" BorderThickness="3"
                                 CornerRadius="10">
-                                <TextBox Margin="5 5 5 5" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black" />
+                                <TextBox Margin="5 5 5 0"  FontSize="19" Padding="7" Text="your gmail." Background="Transparent" BorderThickness="0"/>
                         </Border>
 
                         <Grid Grid.Row="2" Grid.Column="1">
