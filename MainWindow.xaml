@@ -135,6 +135,48 @@
             </Style.Setters>
         </Style>
 
+        <Style x:Key="SignIconBtn" TargetType="Button">
+            <Style.Triggers>
+
+                <Trigger Property="IsMouseOver" Value="True" >
+                    <Setter Property="Background"  Value="Gray"/>
+                    <Setter Property="Foreground" Value="Snow"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Margin" Value="5" />
+                </Trigger>
+
+                <Trigger Property="IsMouseOver" Value="False" >
+                    <Setter Property="Background"  Value="Transparent"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="BorderThickness" Value="0" />
+                </Trigger>
+
+            </Style.Triggers>
+
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="50"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter
+                                        x:Name="contentPresenter"
+                                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                                        Content="{TemplateBinding Content}"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+
     </Window.Resources>
 
 
@@ -449,22 +491,22 @@
 
                 <Image 
                      Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="3"
-                    Source="/WPFEvosFront;Component/Images/SignInBackRound.jpg" Stretch="UniformToFill">
+                     Source="/WPFEvosFront;Component/Images/SignInBackRound.jpg" Stretch="UniformToFill">
                 </Image>
 
                 <Label 
-                    Grid.Row="0" Grid.Column="1"
-                    Content="Ro'yxatdan o'tish"
-                    HorizontalAlignment="Center" VerticalAlignment="Center"
-                    FontSize="28" FontFamily="Latha" FontWeight="SemiBold" Opacity="0.8"
-                    Foreground="Brown">
+                        Grid.Row="0" Grid.Column="1"
+                        Content="Ro'yxatdan o'tish"
+                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                        FontSize="28" FontFamily="Latha" FontWeight="SemiBold" Opacity="0.8"
+                        Foreground="Brown">
                 </Label>
 
                 <Border Grid.Column="1" Grid.Row="1" Background="LightGreen" Opacity="0.5" CornerRadius="20" BorderBrush="DarkGoldenrod" BorderThickness="4">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition />
@@ -473,47 +515,69 @@
                         </Grid.RowDefinitions>
 
                         <Border 
-                                Grid.Row="0" Grid.Column="0"
-                                Margin="25 24 20 20" Background="LightBlue"
-                                BorderBrush="DarkGoldenrod" BorderThickness="3"
-                                CornerRadius="10">
-                                <TextBox Margin="5 5 5 0" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black"/>
+                            Grid.Row="0" Grid.Column="0"
+                            Margin="25 24 20 20" Background="LightBlue"
+                            BorderBrush="DarkGoldenrod" BorderThickness="3"
+                            CornerRadius="10">
+                            <TextBox Margin="5 5 5 2" Background="Transparent" BorderThickness="0" Opacity="0.5" FontSize="18" Padding="8" materialDesign:HintAssist.Hint="Name"/>
+                        </Border>
+                        
+                    
+
+                        
+                        
+                        <Border 
+                            Grid.Row="0" Grid.Column="1"
+                            Margin="20 24 25 20" Background="LightBlue"
+                            BorderBrush="DarkGoldenrod" BorderThickness="3"
+                            CornerRadius="10">
+                            <TextBox Margin="5 5 5 2" Background="Transparent" BorderThickness="0" Opacity="0.5" FontSize="18" Padding="8"/>
                         </Border>
 
                         <Border 
-                                Grid.Row="0" Grid.Column="1"
-                                Margin="20 24 25 20" Background="LightBlue"
-                                BorderBrush="DarkGoldenrod" BorderThickness="3"
-                                CornerRadius="10">
-                                <TextBox Margin="5 5 5 0" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black"/>
+                            Grid.Row="1" Grid.Column="0"
+                            Margin="25 24 20 20" Background="LightBlue"
+                            BorderBrush="DarkGoldenrod" BorderThickness="3"
+                            CornerRadius="10">
+                            <TextBox Margin="5 5 5 2" Background="Transparent"  BorderThickness="0" Opacity="0.5" FontSize="18"  Padding="8"/>
                         </Border>
 
                         <Border 
-                                Grid.Row="1" Grid.Column="0"
-                                Margin="25 24 20 20" Background="LightBlue"
-                                BorderBrush="DarkGoldenrod" BorderThickness="3"
-                                CornerRadius="10">
-                                <TextBox Margin="5 5 5 0" Background="Transparent" BorderThickness="0" Opacity="0.8" FontSize="19" Padding="7" Foreground="Black"/>
+                            Grid.Row="1" Grid.Column="1"
+                            Margin="20 24 25 20" Background="LightBlue"
+                            BorderBrush="DarkGoldenrod" BorderThickness="3"
+                            CornerRadius="10">
+                            <TextBox Margin="5 5 5 2" Background="Transparent" BorderThickness="0" Opacity="0.5" FontSize="18" Padding="8"/>
                         </Border>
 
-                        <Border 
-                                Grid.Row="1" Grid.Column="1"
-                                Margin="20 24 25 20" Background="LightBlue"
-                                BorderBrush="DarkGoldenrod" BorderThickness="3"
-                                CornerRadius="10">
-                                <TextBox Margin="5 5 5 0"  FontSize="19" Padding="7" Text="your gmail." Background="Transparent" BorderThickness="0"/>
-                        </Border>
-
-                        <Grid Grid.Row="2" Grid.Column="1">
-
+                        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                                 <ColumnDefinition />
+                                <ColumnDefinition Width="2*"/>
                             </Grid.ColumnDefinitions>
 
-        
+                            <Button
+                                Grid.Column="1" Margin="14 21 14 21"
+                                Style="{StaticResource SignIconBtn}">
+                                <materialDesign:PackIcon Kind="Facebook" Height="40" Width="40"/>
+                            </Button>
+
+                            <Button
+                                Grid.Column="2" Margin="14 21 14 21"
+                                Style="{StaticResource SignIconBtn}">
+                                <materialDesign:PackIcon Kind="Google" Height="40" Width="40"/>
+                            </Button>
+
+                            <Button 
+                                Grid.Column="3" Margin="14 21 14 21"
+                                Style="{StaticResource SignIconBtn}">
+                                <materialDesign:PackIcon Kind="Twitter" Height="40" Width="40"/>
+                            </Button>
                         </Grid>
+
 
                     </Grid>
                 </Border>
@@ -522,8 +586,8 @@
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource TizimWindowBtn}" Content="Qaytish" FontSize="18" Margin="6 15 20 15" BorderThickness="2" Click="SignQaytishBtn"/>
-                    <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource TizimWindowBtn}" Content="Tasdiqlash" FontSize="18" Margin="20 15 6 15" BorderThickness="2" />
+                    <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource TizimWindowBtn}" Content="Qaytish" FontSize="18" Margin="6 15 20 15" BorderThickness="2" Click="BackBoshSahifa"/>
+                    <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource TizimWindowBtn}" Content="Tasdiqlash" FontSize="18" Margin="20 15 6 15" BorderThickness="2" Click="BackBoshSahifa"/>
                 </Grid>
             </Grid>
         </TabItem>
