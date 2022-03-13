@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Threading;
+using System.Windows;
 
 namespace WPFEvosFront
 {
@@ -33,5 +34,6 @@ namespace WPFEvosFront
         {
             mainTabControl.SelectedIndex = 0;
         }
+
     }
 }

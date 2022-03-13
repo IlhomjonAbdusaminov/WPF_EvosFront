@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFEvosFront"
         mc:Ignorable="d"
-        Title="EVOS_menu" Height="520" Width="850">
+        Title="EVOS_menu" MaxHeight="520" MaxWidth="850" MinHeight="520" MinWidth="850">
     <Window.Resources>
 
         <Style x:Key="BtnRadius" TargetType="Button">
@@ -158,7 +158,7 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="50"
+                            <Border CornerRadius="20"
                                     Background="{TemplateBinding Background}"
                                     BorderBrush="{TemplateBinding BorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}">
@@ -184,7 +184,7 @@
         x:Name="mainTabControl"
         Grid.Row="0" Grid.RowSpan="3"
         Grid.Column="0" Grid.ColumnSpan="3"
-        Background="Transparent" BorderThickness="0">
+        Background="Transparent" BorderThickness="0" >
         
         <!-- Bosh menu -->
         <TabItem Name="Bosh_sahifa_page"
@@ -477,118 +477,99 @@
                 Header="Biz haqimizda"
                 Background="Transparent"
                 BorderThickness="0">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="3.5*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
 
+            <Grid>
                 <Image 
-                     Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="3"
-                     Source="/WPFEvosFront;Component/Images/SignInBackRound.jpg" Stretch="UniformToFill">
+             Source="/WPFEvosFront;Component/Images/SignInBackRound.jpg" Stretch="UniformToFill">
                 </Image>
 
-                <Label 
-                        Grid.Row="0" Grid.Column="1"
-                        Content="Ro'yxatdan o'tish"
-                        HorizontalAlignment="Center" VerticalAlignment="Center"
-                        FontSize="28" FontFamily="Latha" FontWeight="SemiBold" Opacity="0.8"
-                        Foreground="Brown">
-                </Label>
-
-                <Border Grid.Column="1" Grid.Row="1" Background="LightGreen" Opacity="0.5" CornerRadius="20" BorderBrush="DarkGoldenrod" BorderThickness="4">
+                <Border Margin="120 0 120 0">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="4*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
+
                         <Grid.RowDefinitions>
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="1.5*"/>
+                            <RowDefinition Height="1.5*"/>
+                            <RowDefinition Height="1.5*"/>
+                            <RowDefinition Height="1.5*"/>
+                            <RowDefinition Height="2*"/>
                         </Grid.RowDefinitions>
 
-                        <Border 
-                            Grid.Row="0" Grid.Column="0"
-                            Margin="25 24 20 20" Background="LightBlue"
-                            BorderBrush="DarkGoldenrod" BorderThickness="3"
-                            CornerRadius="10">
-                            <TextBox Margin="5 5 5 2" Background="Transparent" BorderThickness="0" Opacity="0.5" FontSize="18" Padding="8" materialDesign:HintAssist.Hint="Name"/>
-                        </Border>
-                        
-                    
-
-                        
-                        
-                        <Border 
+                        <Label
                             Grid.Row="0" Grid.Column="1"
-                            Margin="20 24 25 20" Background="LightBlue"
-                            BorderBrush="DarkGoldenrod" BorderThickness="3"
-                            CornerRadius="10">
-                            <TextBox Margin="5 5 5 2" Background="Transparent" BorderThickness="0" Opacity="0.5" FontSize="18" Padding="8"/>
-                        </Border>
-
-                        <Border 
-                            Grid.Row="1" Grid.Column="0"
-                            Margin="25 24 20 20" Background="LightBlue"
-                            BorderBrush="DarkGoldenrod" BorderThickness="3"
-                            CornerRadius="10">
-                            <TextBox Margin="5 5 5 2" Background="Transparent"  BorderThickness="0" Opacity="0.5" FontSize="18"  Padding="8"/>
-                        </Border>
-
-                        <Border 
+                            Content="Ro'yxatdan o'tish"
+                            HorizontalAlignment="Center" Margin="0 35 0 0"
+                            FontSize="24" FontWeight="SemiBold" Foreground="Chocolate" />
+                        <!--TextBox: Ism-->
+                        <Border
                             Grid.Row="1" Grid.Column="1"
-                            Margin="20 24 25 20" Background="LightBlue"
-                            BorderBrush="DarkGoldenrod" BorderThickness="3"
-                            CornerRadius="10">
-                            <TextBox Margin="5 5 5 2" Background="Transparent" BorderThickness="0" Opacity="0.5" FontSize="18" Padding="8"/>
+                            Background="LightGoldenrodYellow"
+                            Margin="10 7 10 7" CornerRadius="20"
+                            BorderThickness="2" BorderBrush="DarkGoldenrod"
+                            Opacity="0.8" >
+
+                            <TextBox
+                                Margin="10 0 10 0" materialDesign:HintAssist.Hint="Ism (Alisher)"
+                                Background="Transparent" FontSize="15" Padding="10 16 0 0"
+                                BorderThickness="0" materialDesign:HintAssist.HintOpacity="0.7"
+                                />
                         </Border>
 
-                        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                                <ColumnDefinition Width="2*"/>
-                            </Grid.ColumnDefinitions>
+                        <!--TextBox: Familiya-->
+                        <Border
+                            Grid.Row="2" Grid.Column="1"
+                            Background="LightGoldenrodYellow"
+                            Margin="10 7 10 7" CornerRadius="20"
+                            BorderThickness="2" BorderBrush="DarkGoldenrod"
+                            Opacity="0.8">
+                            <TextBox 
+                                Margin="10 0 10 0" materialDesign:HintAssist.Hint="Familiya (Akbarov)"
+                                Padding="10 16 0 0" FontSize="15" Background="Transparent"
+                                BorderThickness="0" materialDesign:HintAssist.HintOpacity="0.7"/>
+                        </Border>
 
-                            <Button
-                                Grid.Column="1" Margin="14 21 14 21"
-                                Style="{StaticResource SignIconBtn}">
-                                <materialDesign:PackIcon Kind="Facebook" Height="40" Width="40"/>
-                            </Button>
+                        <!--TextBox: Login-->
+                        <Border
+                            Grid.Row="3" Grid.Column="1"
+                            Background="LightGoldenrodYellow"
+                            Margin="10 7 10 7" CornerRadius="20"
+                            BorderThickness="2" BorderBrush="DarkGoldenrod"
+                            Opacity="0.8">
+                            <TextBox
+                                Margin="10 0 10 0" materialDesign:HintAssist.Hint="Login (alisher_1)"
+                                Padding="10 16 0 0" FontSize="15" Background="Transparent"
+                                BorderThickness="0" materialDesign:HintAssist.HintOpacity="0.7"/>
+                        </Border>
 
-                            <Button
-                                Grid.Column="2" Margin="14 21 14 21"
-                                Style="{StaticResource SignIconBtn}">
-                                <materialDesign:PackIcon Kind="Google" Height="40" Width="40"/>
-                            </Button>
+                        <!--TextBox: Parol-->
+                        <Border
+                            Grid.Row="4" Grid.Column="1"
+                            Background="LightGoldenrodYellow"
+                            Margin="10 7 10 7" CornerRadius="20"
+                            BorderThickness="2" BorderBrush="DarkGoldenrod"
+                            Opacity="0.8">
+                            <TextBox
+                                Margin="10 0 10 0" materialDesign:HintAssist.Hint="Parol (alisher123)"
+                                Padding="10 16 0 0" FontSize="15" Background="Transparent"
+                                BorderThickness="0" materialDesign:HintAssist.HintOpacity="0.7"/>
+                        </Border>
 
-                            <Button 
-                                Grid.Column="3" Margin="14 21 14 21"
-                                Style="{StaticResource SignIconBtn}">
-                                <materialDesign:PackIcon Kind="Twitter" Height="40" Width="40"/>
-                            </Button>
-                        </Grid>
 
+                        <Button
+                            Grid.Row="5" Grid.Column="1" Background="LightBlue" BorderThickness="0"
+                            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                            Height="50" Margin="10 0 17 0" materialDesign:ButtonAssist.CornerRadius="20" 
+                            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" MouseDoubleClick="BackBoshSahifa">
+                            <TextBlock Text="Tasdiqlash" FontSize="17"/>
+                        </Button>
 
                     </Grid>
                 </Border>
-                <Grid Grid.Column="1" Grid.Row="2">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource TizimWindowBtn}" Content="Qaytish" FontSize="18" Margin="6 15 20 15" BorderThickness="2" Click="BackBoshSahifa"/>
-                    <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource TizimWindowBtn}" Content="Tasdiqlash" FontSize="18" Margin="20 15 6 15" BorderThickness="2" Click="BackBoshSahifa"/>
-                </Grid>
             </Grid>
         </TabItem>
 

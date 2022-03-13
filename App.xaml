@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:WPFEvosFront"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style 
+                BasedOn="{StaticResource MaterialDesignTextBox}"
+                TargetType="{x:Type TextBox}">
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
